@@ -1,0 +1,105 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Launch Current File",
+			"request": "launch",
+			"mainClass": "${file}"
+		},
+		{
+			"type": "java",
+			"name": "Launch bai4",
+			"request": "launch",
+			"mainClass": "bai4",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch bai5",
+			"request": "launch",
+			"mainClass": "bai5",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap1",
+			"request": "launch",
+			"mainClass": "baitap1",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap2",
+			"request": "launch",
+			"mainClass": "baitap2",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap3",
+			"request": "launch",
+			"mainClass": "baitap3",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap4",
+			"request": "launch",
+			"mainClass": "baitap4",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap5",
+			"request": "launch",
+			"mainClass": "baitap5",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap6p1",
+			"request": "launch",
+			"mainClass": "baitap6p1",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap6p2",
+			"request": "launch",
+			"mainClass": "baitap6p2",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap6p3",
+			"request": "launch",
+			"mainClass": "baitap6p3",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap6p4",
+			"request": "launch",
+			"mainClass": "baitap6p4",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap7",
+			"request": "launch",
+			"mainClass": "baitap7",
+			"projectName": "Buoi 2_ed8c92b3"
+		},
+		{
+			"type": "java",
+			"name": "Launch baitap8",
+			"request": "launch",
+			"mainClass": "baitap8",
+			"projectName": "Buoi 2_ed8c92b3"
+		}
+	]
+}
