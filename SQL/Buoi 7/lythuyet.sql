@@ -1,0 +1,14 @@
+--Stored Precedure (SP):
+--Tương tự như hàm trong C, các SP dùng để thực hiện một chuỗi lệnh liên tục, giảm các query giữa server, client
+-- cú pháp:
+-- CREATE PROCEDURE ten_sp (@cac_tham_so kieu_du_lieu) 
+-- with 
+-- 	encryption
+-- 	recompile
+-- 	ecompile
+-- AS
+-- BEGIN
+-- query
+-- end
+-- cú pháp thực thi:
+-- exec ten_SP 'cac_tham_so'
