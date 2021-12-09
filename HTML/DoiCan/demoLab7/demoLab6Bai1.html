@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+
+div.mainbox {
+	background-color:rgb(255,255,204);
+	border:solid 1px rgb(0,128,0);
+	margin:10px;
+	padding:3px;
+	width:100%;
+	display:table;
+	}
+div.mainbox h2 {
+	color: rgb(0,128,0);
+	margin: 5px 0 5px 0;
+	}
+.text-center { text-align:center; }
+.text-left { text-align:left; }
+.text-right { text-align:right; }
+
+#mainbody {
+	width:600px;
+	margin: 0 auto;
+	}
+.mainbox div {
+	/*border: solid 1px rgb(0,128,0);
+	background-color:rgb(172,206,178);
+	padding: 1px 0 1px 5px;
+	float:left;
+	*/
+	padding: 1px 0 1px 5px;
+	display:table-row;
+	}
+.mainbox div div {
+	display:table-cell;
+	border: solid 1px rgb(0,128,0);
+	background-color:rgb(172,206,178);
+	margin:2px;
+	}
+div.row {
+	width:100%;
+	}
+.label {
+	width:150px;
+	height:100%;
+	}
+.input {
+	width:400px;
+	height:100%;
+	}
+.mainbox table td {
+	 border:solid 1px #009;
+	}
+</style>
+<script>
+ function ThucHienSubmitForm() {
+	 //document.getElementById("txtEnglish").value = 100;
+	 var tensinhvien = document.getElementById("cbStudentName").value;
+	 var diemKH = document.getElementById("txtScience").value;
+	 var diemLS = document.getElementById("txtHistory").value;
+	 var diemTO = document.getElementById("txtMathmatics").value;
+	 var diemTA = document.getElementById("txtEnglish").value;
+	 var diemDL = document.getElementById("txtGeography").value;
+	 var tongdiem = parseInt(diemKH)+parseInt(diemLS)+parseInt(diemTO)+parseInt(diemTA)+parseInt(diemDL); //0+diemKH+diemLS+diemTO+diemTA+diemDL;
+	 /*if(tongdiem>90) {
+		 alert("HOc sinh gioi!");
+	 }
+	 else {
+		 alert("khong phai hoc sinh gioi!");
+		 }
+	if(tongdiem>90) {
+		 alert("HOc sinh gioi!");
+	 }
+	 else {
+		 if (tongdiem>70) {
+			 alert("hoc sinh kha!");
+			 }
+			 else {
+				 alert("Hoc sinh trung binh!");
+				 }
+				 alert("Khong phai hoc sinh gioi!");
+		 }
+	 var dongdulieu = '<tr><td>'+tensinhvien+'</td><td>'+diemKH+'</td><td>'+diemLS+'</td><td>'+diemTO+'</td><td>'+diemTA+'</td><td>'+diemDL+'</td><td>'+tongdiem+'</td></tr>';
+	 var inHTML = document.getElementById('tblbangdiem').innerHTML;
+	 console.log(inHTML);
+	 inHTML += dongdulieu;
+	 document.getElementById('tblbangdiem').innerHTML= inHTML;
+	 
+	 
+	 var so1 = 5;
+	 var so2 = 10;
+	 var solonnhat = so2>so1?so2:so1;
+	 var sonhatnhat = so2>so1?so1:so2;
+	 var danhapten = tensinhvien==""?"Chua nhap ten":"Da nhap ten";
+	 var danhap = tensinhvien!="";
+	 */
+	 var so1 = 5;
+	 /*var so = 5;
+	 while(so<100)
+	 	{
+			so1 += so++;
+		 }
+		 console.log(so);
+		 console.log(so1);
+	 }*/
+	 /*
+	 for(var so=5;  so<100;so++ )
+	 {
+		 so1 += so;
+		 if(so%2==0) {
+			 continue;
+		 }
+		 console.log(so);
+	 }
+		 while(true){
+			 if(so>100) {
+				 break;
+			 }
+		}
+		*/
+		while(so1<5) {
+			console.log("So <= 5",so1++);
+			}
+			
+		do {
+			console.log("So <= 5",so1++);
+			}		while(so1<5);
+		 //console.log(so);
+		 console.log(so1);
+		 var tinhthanhpho = [];
+		 tinhthanhpho = ["Hanoi","Da Nang","Ho Chi Minh"];
+		 tinhthanhpho.push("Lam Dong");
+		 var tinh = tinhthanhpho.pop();
+		 console.log(tinh);
+		 console.log(tinhthanhpho.sort());
+		 /*
+		 console.log(tinhthanhpho[1]);
+		 console.log(tinhthanhpho[0]);
+		 console.log(tinhthanhpho[2]);
+		 */
+		 //for(var i=0; i<tinhthanhpho.length;i++)
+		 for(var i in tinhthanhpho)
+		 {
+			 console.log(tinhthanhpho[i]);
+			 }
+	}
+</script>
+</head>
+
+<body>
+<div id="mainbody">
+	<div class="mainbox text-center">
+    	<h2>Student's Mark</h2>
+    </div>
+    <div class="mainbox">
+    <form onsubmit="ThucHienSubmitForm();return false;">
+    	<div>
+	        <strong style="float:left; width:100%;">Fill in the details to place an order</strong>
+        </div>
+        <div>
+            <div class="label">
+                Student Name:
+            </div>
+            <div class="input">
+                <select id="cbStudentName" name="cbStudentName" required>
+                    <option value="">Select</option>
+                    <option value="James">James</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Alex">Alex</option>
+                    <option value="Richard">Richard</option>
+                    <option value="Geogre">Geogre</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Science:
+            </div>
+            <div class="input">
+                <input type="number" id="txtScience" name="txtScience" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                History:
+            </div>
+            <div class="input">
+                <input type="number" id="txtHistory" name="txtHistory" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Mathmatics:
+            </div>
+            <div class="input">
+                <input type="number" id="txtMathmatics" name="txtMathmatics" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                English:
+            </div>
+            <div class="input">
+                <input type="number" id="txtEnglish" name="txtEnglish" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Geography:
+            </div>
+            <div class="input">
+                <input type="number" id="txtGeography" name="txtGeography" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        
+        <div class="submit"><input type="submit" value="Submit" /><input type="reset" value="Reset" /></div>
+        </form>
+    </div>
+    <div class="mainbox text-center">
+    	<h2>Student's Performance</h2>
+    </div>
+    <div class="mainbox">
+    	<table width="100%" cellpadding="5" id="tblbangdiem">
+        	<tr>
+            	<td></td>
+                <td>Science</td>
+                <td>History</td>
+                <td>Mathmatics</td>
+                <td>English</td>
+                <td>Geography</td>
+                <td>Total Marks</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

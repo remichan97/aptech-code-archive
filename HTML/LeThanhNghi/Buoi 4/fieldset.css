@@ -1,0 +1,56 @@
+.wrapper {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.master {
+	background-color: rgb(153, 255, 255);
+	border: 3px solid blue;
+}
+
+legend {
+	color: red;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+label {
+	font-weight: bold;
+	color: blue;
+}
+
+textarea {
+	margin-left: 450px;
+}
+
+.child {
+	border: 2px solid green;
+}
+
+table {
+	margin: 0 auto;
+}
+
+span {
+	color: blue;
+	font-weight: bold;
+}
+
+.nhan {
+	text-align: right;
+}
+
+td {
+	padding-left: 15px;
+}
+
+input[type=button], input[type=reset] {
+	color: red;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 5px;
+}
+
+.buttons {
+	float: right;
+}

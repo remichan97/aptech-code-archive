@@ -1,0 +1,156 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+	<script type="text/javascript">
+		//Khi nguoi dung chon thang / nam -> lay ra danh sach ngay trong thang (so ngay trong thang thay doi theo thang & nam
+		function getEle(id) {
+			return document.getElementById(id);
+		}
+
+		function LaySoNgay() {
+			var ngay = new Date(getEle('txtNam').value, getEle('slThang').value - 1, 1);
+			var html = '';
+			do {
+				//console.log(ngay.getDate()+'/'+(parseInt(ngay.getMonth())+1)+'/'+ngay.getFullYear());
+				//In lich ra trong bang
+				// sd getDay -> lay ra thu
+				// neu thu = 0 -> CN, 1-> T2...
+				if (html == "" && ngay.getDay() != 0) {
+					html += "<tr>";
+					for (i = 0; i < ngay.getDay(); i++) {
+						html += "<td>&nbsp;</td>";
+					}
+				}
+				if (ngay.getDay() == 0) {
+					html += "<tr>";
+				}
+				// Khoi tao bien tt
+				var tt = null;
+				// Chay tung phan tu cua mang thongtin, neu co ngay trung ngay hien tai -> lay thong tin ra dua vao bien tt
+				for (var i in thongtin) {
+					//console.log(FormatNgay(thongtin[i].ngaytt),FormatNgay(ngay));
+					if (FormatNgay(thongtin[i].ngaytt) == FormatNgay(ngay)) {
+						tt = thongtin[i];
+						//console.log(tt);
+					}
+				}
+				if (tt == null) {
+					html += '<td onclick="LuuThongTinNgay(\'' + ngay.getFullYear() + '-' + eval(ngay.getMonth() + 1) + '-' +
+						ngay.getDate() + '\');">' + ngay.getDate() + '</td>'; // Nhung ngay co ngay thang.
+				} else {
+					html += '<td onclick="LuuThongTinNgay(\'' + ngay.getFullYear() + '-' + eval(ngay.getMonth() + 1) + '-' +
+						ngay.getDate() + '\');" style="background-color:yellow;">' + ngay.getDate() + '<br/>' + tt.noidung +
+						'</td>'; // Nhung ngay co ngay thang.
+				}
+
+				if (ngay.getDay() == 6) {
+					html += "</tr>";
+				}
+				ngay = new Date(ngay.setDate(ngay.getDate() + 1));
+			}
+			while (ngay.getMonth() == getEle('slThang').value - 1);
+			if (ngay.getDay() <= 6) {
+				for (i = ngay.getDay(); i <= 6; i++) {
+					html += "<td>&nbsp;</td>";
+				}
+				html += "</tr>";
+			}
+			getEle('tblLich').innerHTML = html;
+		}
+		var thongtin = []
+
+		function LuuThongTinNgay(ngay) {
+			var tt = prompt('Nhap thong tin can luu tru');
+			if (tt != "") {
+				dulieungay = {
+					ngaytt: new Date(ngay),
+					noidung: tt
+				};
+				thongtin.push(dulieungay);
+				LaySoNgay();
+				if (localStorage) {
+					localStorage.setItem("tblLich", JSON.stringify(thongtin));
+				}
+			}
+			//console.log(thongtin);
+		}
+
+		function FormatNgay(ngay) {
+			console.log(ngay);
+			ngay = new Date(ngay);
+			return ngay.getFullYear() + '-' + eval(ngay.getMonth() + 1) + '-' + ngay.getDate();
+		}
+
+		function LoadDuLieu() {
+			if (localStorage) {
+				var dl = localStorage.getItem("tblLich");
+				// ~ kiem tra dl co ton tai (!=undefined) & dl != null & dl!=""
+				if (dl) {
+					thongtin = JSON.parse(dl);
+					console.log(thongtin);
+					LaySoNgay();
+				}
+			}
+		}
+	</script>
+</head>
+
+<body onload="LoadDuLieu();">
+	<div style="width:1000px; margin:0 auto; background-color:#EEE; text-align:center;">
+		<div>
+			<select id="slThang" onchange="LaySoNgay();">
+				<option value="">Select month</option>
+				<option value="1">Thang 1</option>
+				<option value="2">Thang 2</option>
+				<option value="3">Thang 3</option>
+				<option value="4">Thang 4</option>
+				<option value="5">Thang 5</option>
+				<option value="6">Thang 6</option>
+				<option value="7">Thang 7</option>
+				<option value="8">Thang 8</option>
+				<option value="9">Thang 9</option>
+				<option value="10">Thang 10</option>
+				<option value="11">Thang 11</option>
+				<option value="12">Thang 12</option>
+			</select>
+			<input type="number" value="2000" id="txtNam" onchange="LaySoNgay();" />
+		</div>
+		<div id="divLich">
+			<table border=1 cellpadding="5" cellspacing="0">
+				<thead>
+					<tr>
+						<th>
+							Chu Nhat
+						</th>
+						<th>
+							Thu Hai
+						</th>
+						<th>
+							Thu Ba
+						</th>
+						<th>
+							Thu Tu
+						</th>
+						<th>
+							Thu Nam
+						</th>
+						<th>
+							Thu Sau
+						</th>
+						<th>
+							Thu Bay
+						</th>
+					</tr>
+				</thead>
+				<tbody id="tblLich">
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

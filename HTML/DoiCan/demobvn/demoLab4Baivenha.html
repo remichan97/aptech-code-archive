@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript">
+	function ThucHienSubmitForm() {
+		//alert('submit form!');
+		var tenkh = document.getElementById('txtCustomerName').value;
+		var soluongsp = document.getElementById('txtQuantity').value;
+		var sp = document.getElementById('cbProductName');
+//				console.log(sp.options[sp.selectedIndex].text);
+		var sanpham = sp.options[sp.selectedIndex].text;
+		var thanhtien = document.getElementById('txtAmount').value;
+		alert('Xin chao '+tenkh+'!\nChung toi da nhan duoc order cua ban! Ban da order: \n'+soluongsp+'x '+sanpham+' = '+thanhtien);
+		}
+	function ThayDoiChonSanPham() {
+		var giasp = document.getElementById('cbProductName').value;
+		document.getElementById('txtUnitPrice').value = giasp;
+		
+		TinhTien();
+		}
+	function TinhTien() {
+		var giasp = document.getElementById('txtUnitPrice').value;
+		var soluongsp = document.getElementById('txtQuantity').value;
+		var thanhtien = giasp*soluongsp;
+		document.getElementById('txtAmount').value = thanhtien;
+		}
+</script>
+</head>
+
+<body>
+<div id="mainbody">
+	<div class="mainbox text-center">
+    	<h2>Order Entry Form</h2>
+    </div>
+    <div class="mainbox">
+    <form onsubmit="ThucHienSubmitForm();">
+    	<div>
+	        <strong style="float:left; width:100%;">Fill in the details to place an order</strong>
+        </div>
+        <div>
+            <div class="label">
+                Customer Name:
+            </div>
+            <div class="input">
+                <input type="text" id="txtCustomerName" name="txtCustomerName" required="required" />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Customer Address:
+            </div>
+            <div class="input">
+                <textarea id="txtCustomerAddress" name="txtCustomerAddress" required="required"></textarea>
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Product Name:
+            </div>
+            <div class="input">
+                <select id="cbProductName" name="cbProductName" onchange="ThayDoiChonSanPham();">
+                    <option value="">Select</option>
+                    <option value="324.12">Monitor</option>
+                    <option value="75.00">Mouse</option>
+                    <option value="122.85">Keyboard</option>
+                    <option value="194.64">Printer</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Unit Price ($):
+            </div>
+            <div class="input">
+                <input type="number" id="txtUnitPrice" name="txtUnitPrice" value="0" readonly="readonly" disabled="disabled" />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Quantity:
+            </div>
+            <div class="input">
+                <input type="number" id="txtQuantity" name="txtQuantity" value="0" min="0" max="1000" onchange="TinhTien();" />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Amount ($):
+            </div>
+            <div class="input">
+                <input type="number" id="txtAmount" name="txtAmount" value="0" readonly="readonly" disabled="disabled" />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Payment Method:
+            </div>
+            <div class="input">
+                <select id="cbPaymentMethod" name="cbPaymentMethod">
+                    <option value="Cash">Cash</option>
+                    <option value="Check">Check</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                </select>
+            </div>
+        </div>
+        <div class="submit"><input type="submit" value="Submit" onclick="alert('ban vua bam nut submit');" /><input type="reset" value="Reset" /></div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

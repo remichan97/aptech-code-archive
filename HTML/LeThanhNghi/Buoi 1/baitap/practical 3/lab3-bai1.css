@@ -1,0 +1,21 @@
+td {
+	text-align: center;
+	padding: 4px;
+	border: 2px inset black;
+}
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	border: 3px inset black;
+}
+
+td.name {
+	text-align: left;
+}
+.dau {
+	width: 45px;
+	height: 60px;
+}
+tr.main, tr.hs	{
+	font-weight: bold;
+}

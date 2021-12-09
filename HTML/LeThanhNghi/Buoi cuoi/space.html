@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<script>
+			function space() {
+				with (frm) {
+					var o = str.value;
+					o = o.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ");
+					str.value = o;
+				}
+				return false;
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="" name="frm" onsubmit="return space()">
+			<input type="text" name="str" id="" required placeholder="Type a string to trim out spaces!"
+				style="width: 15%;">
+			<input type="submit" value="Trim space">
+		</form>
+	</body>
+
+</html>

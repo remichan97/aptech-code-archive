@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HTML Live Show</title>
+    <style>
+        .nhan,
+        th {
+            text-align: center;
+        }
+
+        .gia,
+        .tong {
+            text-align: right;
+        }
+
+        td {
+            background-color: rgb(229, 241, 244);
+        }
+
+        th {
+            background: linear-gradient(to top, rgb(50, 138, 164) 0%, rgb(32, 93, 112) 100%);
+            border-style: outset;
+            color: white;
+        }
+
+        table {
+            width: 500px;
+            height: 500px;
+            padding: 10px 20px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Bảng Mua Sắm Thiết Bị Di Động 2012</caption>
+        <tr>
+            <th>Nhà Sản Xuất</th>
+            <th>Mẫu</th>
+            <th>Giá thành</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Apple</td>
+            <td class="nhan">iPhone</td>
+            <td class="gia">$ 399</td>
+        </tr>
+        <tr>
+            <td class="nhan">iPad</td>
+            <td class="gia">$ 699</td>
+        </tr>
+        <tr>
+            <td class="nhan">iMac</td>
+            <td class="gia">$ 1099</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Samsung</td>
+            <td class="nhan">Galaxy Note</td>
+            <td class="gia">$ 355</td>
+        </tr>
+        <tr>
+            <td class="nhan">Galaxy Tab</td>
+            <td class="gia">$ 655</td>
+        </tr>
+        <tr>
+            <td class="nhan">ATIV Book</td>
+            <td class="gia">$ 1099</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Sony</td>
+            <td class="nhan">Xperia Z Phone</td>
+            <td class="gia">$ 319</td>
+        </tr>
+        <tr>
+            <td class="nhan">Xperia Z Tablet</td>
+            <td class="gia">$ 619</td>
+        </tr>
+        <tr>
+            <td class="nhan">Sony Vaio</td>
+            <td class="gia">$ 1019</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="tong">Tổng: $6129</td>
+        </tr>
+    </table>
+</body>

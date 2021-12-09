@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Game</title>
+    <style>
+        button {
+            font-weight: bold;
+            font-size: 50px;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        div {
+            background-color: #666;
+            color: #FFF;
+            width: 600px;
+            border: double 5px #F00;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .score {
+            width: 30px;
+            height: 30px;
+            float: left;
+            text-align: center;
+            margin-left: 10px;
+        }
+        h3 {
+            float: left;
+        }
+    </style>
+    <script type="text/javascript">
+        var ketqua = true;
+        var diem = 0;
+        function TraLoi(kq) {
+            if (kq == ketqua) {
+                diem++;
+                TaoPhepTinhMoi();
+                document.getElementById('score').value = diem;
+            } else {
+                alert("Game over! Total points: " + diem);
+                diem = 0;
+            }
+        }
+
+        function TaoPhepTinhMoi() {
+            var so1 = Math.floor(Math.random() * 10);
+            var so2 = Math.floor(Math.random() * 10);
+            var dau = '+-*' [Math.floor(Math.random() * 3)]
+            console.log(so1 + dau + so2);
+            var k = eval(so1 + dau + so2);
+            ketqua = Math.floor(Math.random() * 2) == 1; // true neu = 1, false neu = 0
+            if (ketqua) {
+                document.getElementById('txtPhepTinh').value = so1 + dau + so2 + '=' + k;
+            } else {
+                ketquasai = k;
+                do {
+                    ketquasai = k + Math.floor(Math.random() * 21) - 10;
+                }
+                while (k == ketquasai)
+                document.getElementById('txtPhepTinh').value = so1 + dau + so2 + '=' + ketquasai;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>Math game</h2>
+        <h3>Points:</h3>
+        <input type="number" readonly class="score" value="0" id="score">
+        <input type="text" value="1+1=2" id="txtPhepTinh"
+            style="width:100%; font-size:100px; text-align:center;" /><br />
+        <button onclick="TraLoi(true);" style="color:#0F0;">O</button>&nbsp;&nbsp;&nbsp;<button onclick="TraLoi(false);"
+            style="color:#F00;">X</button>
+    </div>
+</body>

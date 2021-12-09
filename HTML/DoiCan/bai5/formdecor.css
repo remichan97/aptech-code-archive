@@ -1,0 +1,27 @@
+form#order {
+	width: 550px;
+	height: 550px;
+	background-color: khaki;
+}
+
+div {
+	border: 2px solid #1C6EA4;
+	float: left;
+	width: 250px;
+	padding: 15px;
+	background-color: lawngreen;
+}
+
+div.label {
+	width: 150px;
+	text-align: left;
+	background-color: lawngreen;
+}
+
+h2 {
+	text-align: center;
+	border: 2px inset lawngreen;
+	width: 550px;
+	background-color: khaki
+}
+div.button {width: 450px;}

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+	function TinhGiaiThua() {
+		var ketqua = 1;
+		for(var so = document.getElementById('txtSo').value; so>=1; ketqua *= so--)
+		document.getElementById('txtSo').value = ketqua;
+	}
+</script>
+</head>
+
+<body>
+<div style="background-color:#666; color:#FFF;">
+	<h2>Tinh giai thuc</h2>
+    <input type="number" id="txtSo" />
+    <input type="button" value="Tinh" onclick="TinhGiaiThua();" />
+</div>
+</body>
+</html>

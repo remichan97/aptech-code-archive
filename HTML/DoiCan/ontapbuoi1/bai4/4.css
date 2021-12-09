@@ -1,0 +1,29 @@
+div.trai,
+div.phai {
+    float: left;
+    height: 100%;
+}
+
+div.khung {
+    content: "";
+    display: table;
+    clear: both;
+    margin: 0 auto;
+}
+
+div.trai {
+    width: 500px;
+    border-right: 1px solid black;
+}
+
+p.label {
+    text-align: center;
+}
+
+div.phai {
+    padding: 10px;
+}
+
+span {
+    font-style: italic;
+}

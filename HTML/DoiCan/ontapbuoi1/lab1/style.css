@@ -1,0 +1,24 @@
+body {background-color:rgb(255, 255, 204) ;
+}
+a {
+    background-color: rgb(135, 218, 135);
+    border: 3px solid black;
+    border-radius: 7px;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+div.title{
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+div.tuan {
+    width: 500px;
+    margin: auto;
+}
+table,td,th {
+    border: 3px solid #d0d0d0;
+    empty-cells: show;
+    margin-top: 15px;
+    text-align: center;
+}

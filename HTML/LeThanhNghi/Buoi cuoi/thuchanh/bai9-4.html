@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		input[type=reset] {
+			width: 45px;
+			transition: ease 0.5s;
+		}
+		input[type=reset]:hover {
+			width: 150px;
+			transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
+		}
+	</style>
+	<script>
+		function cmp() {
+			with(frm) {
+				var a = one.value.length;
+				var b = two.value.length;
+				console.log(a);
+				console.log(b);
+				if (a > b) {
+					alert('String #1 has more characters');
+				} else if (a < b) {
+					alert('String #2 has more characters');
+				} else {
+					alert('Both strings has the same number of characters');
+				}
+			}
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<h2>String Comparison</h2>
+	<p>In the following two text boxes, type in 2 strings to compare their number of characters</p>
+	<form action="" name="frm" onsubmit="return cmp()">
+		<input type="text" name="one" id="" placeholder="String #1" required>
+		<input type="text" name="two" id="" placeholder="String #2" required>
+		<input type="submit" value="Compare!">
+		<input type="reset" value="Clear everything?">
+	</form>
+</body>
+</html>

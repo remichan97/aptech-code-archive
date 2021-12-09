@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<script>
+			function checkEmail() {
+				var ptn = /\.[A-Za-z]{2,4}/;
+				with (frm) {
+					var r = ptn.test(data.value);
+					if (r) {
+						alert('This email is valid. Thank you!');
+						return true;
+					} else {
+						alert('This email is not valid! Please try again.');
+						return false;
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="" name="frm" onsubmit="return checkEmail()">
+			<label for="">Input an Email Address:</label>
+			<input type="email" name="data" id="" required>
+			<br>
+			<input type="submit" value="Check Eligibility">
+		</form>
+	</body>
+
+</html>

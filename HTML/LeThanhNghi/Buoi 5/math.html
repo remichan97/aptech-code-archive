@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="./math.css">
+		<script src="./math.js"></script>
+	</head>
+
+	<body>
+		<section class="wrapper">
+			<form name="mth">
+				<div class="input">
+					<input type="number" name="number1" id="" placeholder="Number 1">
+					<input type="number" name="number2" id="" placeholder="Number 2">
+				</div>
+				<br>
+				<div class="math">
+					<input type="button" value="Add" onclick="tinhToan('+')">
+					<input type="button" value="Subtract" onclick="tinhToan('-')">
+					<input type="button" value="Multiply" onclick="tinhToan('*')">
+					<input type="button" value="Divide" onclick="tinhToan('/')">
+				</div>
+				<p>Result:</p>
+				<input type="number" name="ketQua" id="" readonly>
+			</form>
+		</section>
+	</body>
+
+</html>

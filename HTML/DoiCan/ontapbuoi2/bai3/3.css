@@ -1,0 +1,23 @@
+header {
+    text-align: center;
+    padding-bottom: 10px;
+}
+div.trai, article {
+    float: left;
+}
+article {
+    width: 416px;
+}
+section {
+    margin: 0 auto;
+    content: "";
+    display: table;
+    clear: both;
+}
+span {
+    color: rgb(225, 37, 25);
+}
+div span {
+    margin-right: 60px;
+    font-size: 50px;
+}

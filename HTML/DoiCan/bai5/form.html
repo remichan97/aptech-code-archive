@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Order Entry Form</title>
+    <script>
+        function price() {
+            var cash = document.getElementById("goods");
+            var display = cash.options[cash.selectedIndex].value;
+            document.getElementById("gia").value = display;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Order Entry Form</h2>
+    <form id="order" oninput="total.value=parseInt(gia.value) * parseInt(qty.value)">
+        <caption><b>Fill in the details below to place an order.</b></caption>
+        <br>
+        <div class="label">Customer Name:</div>
+        <div><input type="text" pattern="[/^[A-Za-z]+$/]" required></div>
+        <div class="label" style="height: 65px;">Customer Address:</div>
+        <div><textarea name="add" id="add" cols="30" rows="4" required></textarea></div>
+        <div class="label">Product Name:</div>
+        <div><select name="goods" id="goods" onchange="price()">
+                <option value="0">Select...</option>
+                <option value="324.12">Monitor</option>
+                <option value="75.00">Mouse</option>
+                <option value="122.44">Keyboard</option>
+                <option value="194.64">Printer</option>
+            </select></div>
+        <div class="label">Unit Price ($):</div>
+        <div><input type="text" name="gia" id="gia" value="0" readonly></div>
+        <div class="label">Quantity:</div>
+        <div><input type="number" id="qty" name="qty" required min="0"></div>
+        <div class="label">Amount ($):</div>
+        <div><input type="text" value="0" <output name="total" for="gia qty"></output></div>
+        <div class="label">Payment Mode:</div>
+        <div><select name="paymenttype" id="paymenttype">
+                <option value="cash">Cash</option>
+                <option value="check">Check</option>
+                <option value="credit">Credit Card</option>
+                <option value="debit">Debit Card</option>
+            </select></div>
+        <div class="button"><input type="submit" onclick="alert('Your order has been accepted and will be processed soon. Thank you!')"> <input type="reset"></div>
+    </form>
+</body>

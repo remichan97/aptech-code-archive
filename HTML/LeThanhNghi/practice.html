@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<script>
+			function cmp() {
+				with (frm) {
+					var a = no1.value.length;
+					var b = no2.value.length;
+					if (a > b) {
+						result.value = "String #1";
+					} else if (a < b) {
+						result.value = "String #2";
+					} else {
+						result.value = "Both strings are equal";
+					}
+				}
+				return false;
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="" name="frm" onsubmit="return cmp()">
+			<p>In the following two text box, enter two strings to compare their number of characters</p>
+			<input type="text" name="no1" id="" required="required" placeholder="String #1"><input type="text"
+				name="no2" id="" required="required" placeholder="String #2">
+			<section>
+				<input type="submit" value="The box has more characters is">
+				<input type="textbox" name="result" readonly="readonly"></input>
+			</section>
+		</form>
+	</body>
+
+</html>

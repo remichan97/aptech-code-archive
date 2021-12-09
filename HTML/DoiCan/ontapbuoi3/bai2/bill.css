@@ -1,0 +1,74 @@
+div.khung {
+    margin: 0 auto;
+    border: 5px solid black;
+    width: 435px;
+    height: 633px;
+    border-radius: 30px;
+}
+
+body {
+    background-color: rgb(107, 18, 8);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div.tieude {
+    border-bottom: 5px solid black;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 35px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+form {
+    background-color: white;
+    width: 434px;
+    height: 540px;
+    border: 5px thin white;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+p,
+span {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+div.xacnhan {
+    text-align: center;
+}
+
+select {
+    margin-left: 10px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+input.nutbam {
+    font-size: 25px;
+    background-color: rgb(173, 19, 57);
+    text-transform: uppercase;
+    color: white;
+    padding: 15px;
+    font-weight: bolder;
+    border: none;
+    transition: ease-out 0.4s;
+}
+
+input.nutbam:hover {
+    background-color: rgb(53, 4, 4);
+    padding: 20px;
+    transition-duration: 0.4s
+}
+
+.so1,
+.so2 {
+    padding: 10px;
+}
+
+.so2 {
+    margin-left: 10px;
+    width: 45px;
+}

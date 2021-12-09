@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+
+div.mainbox {
+	background-color:rgb(255,255,204);
+	border:solid 1px rgb(0,128,0);
+	margin:10px;
+	padding:3px;
+	width:100%;
+	display:table;
+	}
+div.mainbox h2 {
+	color: rgb(0,128,0);
+	margin: 5px 0 5px 0;
+	}
+.text-center { text-align:center; }
+.text-left { text-align:left; }
+.text-right { text-align:right; }
+
+#mainbody {
+	width:600px;
+	margin: 0 auto;
+	}
+.mainbox div {
+	/*border: solid 1px rgb(0,128,0);
+	background-color:rgb(172,206,178);
+	padding: 1px 0 1px 5px;
+	float:left;
+	*/
+	padding: 1px 0 1px 5px;
+	display:table-row;
+	}
+.mainbox div div {
+	display:table-cell;
+	border: solid 1px rgb(0,128,0);
+	background-color:rgb(172,206,178);
+	margin:2px;
+	}
+div.row {
+	width:100%;
+	}
+.label {
+	width:150px;
+	height:100%;
+	}
+.input {
+	width:400px;
+	height:100%;
+	}
+.mainbox table td {
+	 border:solid 1px #009;
+	}
+</style>
+<script>
+var danhsachsinhvien = [];
+function getVal(id) {
+	var giatri = document.getElementById(id).value;
+	if(isNaN(giatri)) 
+	{ 
+		return giatri;
+	}
+	else
+	{
+		return parseInt(giatri);
+	}
+}
+ function ThucHienSubmitForm() {
+	 var sinhvien = {
+		 	tensinhvien: getVal("cbStudentName"),
+			diemKH: getVal("txtScience"),
+			diemLS: getVal("txtHistory"),
+			diemTO: getVal("txtMathmatics"),
+			diemTA: getVal("txtEnglish"),
+			diemDL: getVal("txtGeography")
+		 }
+
+	 sinhvien.tongdiem = sinhvien.diemKH+sinhvien.diemLS+sinhvien.diemTO+sinhvien.diemTA+sinhvien.diemDL; 
+	 var vitri = -1;
+	 for(i=0;i<danhsachsinhvien.length;i++)
+	 {
+	 	if(danhsachsinhvien[i].tensinhvien==sinhvien.tensinhvien)
+		{
+			vitri = i;
+			}
+	 }
+	if(vitri!=-1)
+	{
+		danhsachsinhvien[vitri]  = sinhvien;
+		alert("Da sua sinh vien o vi tri "+vitri+" ten: "+sinhvien.tensinhvien);
+		}
+	else
+	{
+	 danhsachsinhvien.push(sinhvien);
+	 alert("Da them sinh vien ten: "+sinhvien.tensinhvien);
+	}
+	RefreshBangDiem();
+	 
+	}
+function RefreshBangDiem() {
+	var inHtml = '';
+	for(i=0;i<danhsachsinhvien.length;i++) {
+		var sinhvien = danhsachsinhvien[i];
+		var dongdulieu = '<tr><td>'+sinhvien.tensinhvien+'</td><td>'+sinhvien.diemKH+'</td><td>'+sinhvien.diemLS+'</td><td>'+sinhvien.diemTO+'</td><td>'+sinhvien.diemTA+'</td><td>'+sinhvien.diemDL+'</td><td>'+sinhvien.tongdiem+'</td><td><button onclick="XoaSinhVien('+i+')">Delete</button></td></tr>';
+		inHtml += dongdulieu;
+		}
+	
+	 document.getElementById('tblbangdiem').innerHTML= inHtml;
+	
+	}
+function XoaSinhVien(vitri) {
+	var sinhvienbixoa = danhsachsinhvien.splice(vitri,1);
+	console.log(sinhvienbixoa);
+	console.log(danhsachsinhvien);
+	alert('da xoa sinh vien ten: '+sinhvienbixoa[0].tensinhvien);
+	RefreshBangDiem();
+	}
+</script>
+</head>
+
+<body>
+<div id="mainbody">
+	<div class="mainbox text-center">
+    	<h2>Student's Mark</h2>
+    </div>
+    <div class="mainbox">
+    <form onsubmit="ThucHienSubmitForm();return false;">
+    	<div>
+	        <strong style="float:left; width:100%;">Fill in the details to place an order</strong>
+        </div>
+        <div>
+            <div class="label">
+                Student Name:
+            </div>
+            <div class="input">
+                <select id="cbStudentName" name="cbStudentName" required>
+                    <option value="">Select</option>
+                    <option value="James">James</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Alex">Alex</option>
+                    <option value="Richard">Richard</option>
+                    <option value="Geogre">Geogre</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Science:
+            </div>
+            <div class="input">
+                <input type="number" id="txtScience" name="txtScience" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                History:
+            </div>
+            <div class="input">
+                <input type="number" id="txtHistory" name="txtHistory" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Mathmatics:
+            </div>
+            <div class="input">
+                <input type="number" id="txtMathmatics" name="txtMathmatics" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                English:
+            </div>
+            <div class="input">
+                <input type="number" id="txtEnglish" name="txtEnglish" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                Geography:
+            </div>
+            <div class="input">
+                <input type="number" id="txtGeography" name="txtGeography" value="0" max="100" min="0"  />
+            </div>
+        </div>
+        
+        <div class="submit"><input type="submit" value="Submit" /><input type="reset" value="Reset" /></div>
+        </form>
+    </div>
+    <div class="mainbox text-center">
+    	<h2>Student's Performance</h2>
+    </div>
+    <div class="mainbox">
+    	<table width="100%" cellpadding="5">
+        	<thead>
+        	<tr>
+            	<td></td>
+                <td>Science</td>
+                <td>History</td>
+                <td>Mathmatics</td>
+                <td>English</td>
+                <td>Geography</td>
+                <td>Total Marks</td>
+                <td>Delete</td>
+            </tr>
+            </thead>
+            <tbody id="tblbangdiem">
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

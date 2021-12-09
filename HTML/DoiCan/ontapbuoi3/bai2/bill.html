@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Share Bill</title>
+    <link rel="stylesheet" href="./bill.css">
+    <script src="./bill.js"></script>
+</head>
+
+<body>
+    <div class="khung">
+        <div class="tieude">
+            share bill
+        </div>
+        <form onsubmit="tinhtien()">
+            <p>How much was your bill?</p>
+            <span>$</span> <input class="so1" type="number" step="0.01" min="1" placeholder="Bill Amount" id="tien" required>
+            <p>How was your service?</p>
+            <select id="tienboa" required>
+                <option value="">-- Choose an Option --</option>
+                <option value="5">Good (+5%)</option>
+                <option value="2">Average (+2%)</option>
+                <option value="0">Bad (0%)</option>
+            </select>
+            <p>How many people are sharing the bill?</p>
+            <input class="so2" type="number" id="songuoi" min="1" placeholder="1" required> <span>people</span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="xacnhan">
+                <input type="submit" value="calculate!" class="nutbam">
+            </div>
+        </form>
+    </div>
+</body>

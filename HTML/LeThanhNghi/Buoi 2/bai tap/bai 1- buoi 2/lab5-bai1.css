@@ -1,0 +1,42 @@
+div {
+	text-align: center;
+	height: 150px;
+	font-weight: bold;
+	font-size: 24px;
+	border: 2px solid white;
+	box-sizing: border-box;
+}
+
+
+.num1 {
+	background-color: black;
+	color: white;
+}
+
+.num2, .num3, .num4 {
+	height: 250px;
+}
+
+.num2, .num3, .num4, .num5 {
+	float: left;
+}
+
+.num2 {
+	background-color: orangered;
+	width: 15%;
+}
+
+.num3 {
+	background-color: limegreen;
+	width: 70%;
+}
+
+.num4 {
+	background-color: blue;
+	width: 15%;
+}
+
+.num5 {
+	background-color: cyan;
+	width: 100%;
+}

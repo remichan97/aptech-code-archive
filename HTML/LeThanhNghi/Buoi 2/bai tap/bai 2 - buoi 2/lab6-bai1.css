@@ -1,0 +1,51 @@
+div {
+	text-align: center;
+	border: 2px solid green;
+	line-height: 50px;
+	box-sizing: border-box;
+}
+
+.so1, .so2 {
+	background-color: black;
+	width: 15%;
+	height: 450px;
+	border: none;
+}
+.so1 {
+	float: left;
+}
+
+.so2 {
+	float: right;
+}
+
+.so3, .so4 {
+	line-height: 150px;
+	height: 150px;
+}
+
+.so3 {
+	float: left;
+	width: 20%;
+}
+
+.menu {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	border: none;
+}
+
+.so5, .so6, .so7, .so8, .so9 {
+	background-color: rgb(51, 51, 51);
+	color: rgb(255, 255, 0);
+	font-weight: bold;
+	font-size: 16px;
+	transition-duration: 0.2s;
+}
+
+.so5:hover, .so6:hover, .so7:hover, .so8:hover, .so9:hover {
+	background-color: #666666;
+	color: green;
+	font-size: 18px;
+	transition-duration: 0.2s;
+}

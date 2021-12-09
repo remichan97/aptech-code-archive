@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Order Entry Form</title>
+    <link rel="stylesheet" href="./decorlan2.css">
+</head>
+<script>
+    function NhapGiaSP() {
+        var gia = document.getElementById("cmbGoods");
+        var hiengia = gia.options[gia.selectedIndex].value;
+        document.getElementById("numPri").value = hiengia;
+    }
+
+    function tinhtien() {
+        var a = document.getElementById("numPri").value;
+        var b = document.getElementById("numQty").value;
+        var tien = a * b
+        document.getElementById("numAmt").value = tien;
+    }
+</script>
+
+<body>
+    <h2>Order Entry Form</h2>
+    <form onsubmit="alert('Your order has been accepted and will be processed soon. Thank you!')">
+        <caption><b>Fill in the form below to place an order:</b></caption>
+        <div class="nhan">Customer Name:</div>
+        <div class="nhap"><input type="text" name="tenKH" id="txttenKH" required></div>
+        <div class="nhan">Customer Address:</div>
+        <div class="nhap"><textarea name="Add" id="txtAdd" cols="30" rows="4" required></textarea></div>
+        <div>Product Name:</div>
+        <div class="nhap"><select name="Goods" id="cmbGoods" required onchange="NhapGiaSP()">
+                <option value="0">Select...</option>
+                <option value="324.12">Monitor</option>
+                <option value="75.00">Mouse</option>
+                <option value="122.85">Keyboard</option>
+                <option value="194.64">Printer</option>
+            </select>
+        </div>
+        <div class="nhan">Unit Price ($)</div>
+        <div class="nhap"><input type="number" name="Pri" id="numPri" value="0" readonly></div>
+        <div class="nhan">Quantity:</div>
+        <div class="nhap"><input type="number" name="Qty" id="numQty" min="0" required onchange="tinhtien()"></div>
+        <div class="nhan">Amount:</div>
+        <div class="nhap"><input type="number" name="tong" id="numAmt" value="0" readonly></div>
+        <div class="nhan">Payment Method:</div>
+        <div class="nhap"><select name="PayMtd" id="PayMtd" required>
+                <option value="Cash">Cash</option>
+                <option value="Check">Check</option>
+                <option value="Credit">Credit Card</option>
+                <option value="Debit">Debit Card</option>
+            </select></div>
+        <div><input type="submit"> <input type="reset"></div>
+    </form>
+</body>

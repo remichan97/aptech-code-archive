@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<script>
+			function fCheck() {
+				//1. Hãy tạo 1 mẫu trong đó kiểm tra chuỗi nhập vào chỉ có xxx?
+				var mau1 = /^(xyz)*$/;//Ý nghĩa: Chuỗi bất kỳ chứa x
+				//2. Tạo mẫu để duyệt chuỗi là x rồi đến ký tự bất kỳ rồi đến x?
+				//var mau1=/^x[^]x$/;
+				//^ : Quy định ký tự hoặc cụm ký tự ngay sau nó phải xuất hiện đầu tiên trong chuỗi
+				//(): Biểu diễn cụm ký tự. Ví dụ: (abc)
+				//$ : Quy định ký tự hoặc cụm ký tự ngay trước nó phải xuất hiện phía cuối cùng của chuỗi.
+				//[] : Một trong các ký tự trong cặp ngoặc vuông
+				//[a-z]
+				//[0-9]
+				// \d <=> [0-9]
+				//[A-Z]
+				//[^] : Không được là một trong các ký tự trong ngoặc vuông
+				//- : Tạo 1 dải giá trị (range) liên tục
+				// \w <=> [a-zA-Z0-9_]
+				// . : Tương ứng với 1 ký tự bất kỳ
+				// * : Ký tự hoặc cụm ký tự ngay trước nó xuất hiện từ 0 lần.
+				// + : Ký tự hoặc cụm ký tự ngay trước nó xuất hiện từ 1 lần.
+				// ? : Ký tự hoặc cụm ký tự ngay trước nó xuất hiện 0 hoặc 1 lần.
+				// | : x|y => x hoặc y; x|y|z|t...
+				// \s : space
+				// \t : tab
+				// \ : Đặt trước ký tự đặc biệt nào thì ký tự đó thành ký tự thông thường. Ví dụ: \$  \.
+				//{n,m} : Ký tự hoặc cụm ký tự ngay trước nó xuất hiện từ n đếm m lần. Ví dụ:  a{2,5}   b{2,2}   c{2,}   //d{,10}
+				with (frm) {
+					var kq = mau1.test(data.value);
+					//alert(kq);
+				}
+				//return false;
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- Biểu thức chính quy (Regular Expression - regex) -->
+		<!-- Dùng để tạo mẫu (pattern) cho việc so khớp (match) dữ liệu với mục đích tìm kiếm, kiểm tra dữ liệu đầu vào -->
+		<!-- Để tạo mẫu, ta theo cú pháp sau: -->
+		<!-- var tên_mẫu = /mẫu/i|g; -->
+		<!-- i (ignore) (mặc định): tìm xong thì kết thúc -->
+		<!-- g (global): tìm xong vẫn tìm tiếp (cho đến hết chuỗi) -->
+		<!-- Dùng hàm test() (phổ biến) để kiểm tra hoặc tìm kiếm đơn giản: mẫu.test(chuỗi_dữ_liệu) -->
+		<!-- hàm test() trả về false nếu không tìm thấy, trả về true nếu tìm thấy -->
+		<form name="frm" onsubmit="return fCheck();">
+			<label>Input data: </label><input type="email" name="data"><br>
+			<input type="submit" value="Check">
+		</form>
+	</body>
+
+</html>

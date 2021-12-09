@@ -1,0 +1,37 @@
+section {
+	width: 35%;
+	margin: 0 auto;
+	background-color: cyan;
+	border: 2px solid blue;
+	box-sizing: border-box;
+}
+
+h1 {
+	color: red;
+}
+
+td {
+	padding: 10px 10px 10px 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+label {
+	color: blue;
+	font-weight: bold;
+}
+
+input, textarea {
+	margin-left: 30px;
+}
+
+input[type=submit], input[type=reset] {
+	color: red;
+	font-weight: bold;
+}
+
+input[type=reset] {
+	margin: 0;
+}

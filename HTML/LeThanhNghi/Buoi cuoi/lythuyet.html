@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<script>
+			function fCheck() {
+				var pattern = /x/g;
+				with (frm) {
+					//Hàm test():
+					//alert(pattern.test(data.value));
+					//Hàm exec(): Tương tự hàm test(), nhưng khác ở giá trị trả về. Trả về null nếu không tìm thấy, trả về mẫu nếu tìm thấy.
+					//var kq=pattern.exec(data.value);
+					//alert(kq)
+					//Hàm match(): tương tự hàm exec, khác ở chỗ hàm match cho phép tìm và trả về mẫu ở tất cả những vị trí tìm thấy hoặc là khớp
+					//Cú pháp: dữ_liệu.match(mẫu)
+					//var kq=data.value.match(pattern);//kq: chứa các kết quả tìm thấy hoặc khớp => kq là mảng.
+					//alert(kq.length)
+					//Hàm search(): Tìm kiếm hoặc so khớp mẫu với chuỗi, hoặc chuỗi với chuỗi. Hàm trả về -1 nếu không tìm thấy, trả về vị trí theo chỉ số nếu tìm thấy hoặc khớp.
+					//var kq=data.value.search(pattern);
+					//alert(kq)
+					// if(pass2.value.search(pass1.value)!=-1){
+					//  alert("Password2 không được chứa Password1");
+					//  return false;
+					// }
+					//Hàm split(): Tách chuỗi dữ liệu thành các chuỗi con, mẫu hoặc chuỗi tìm kiếm là phần "dao cắt" và sẽ mất.
+					//var kq=data.value.split(pattern);
+					//alert(kq)
+					//Hàm replace(): Tìm kiếm và thay thế mẫu hoặc chuỗi bằng mẫu hoặc chuỗi khác.
+					var kq = data.value.replace(pattern, "Z");
+					alert(kq);
+					//Bài tập: Hãy đảm bảo dữ liệu nhập vào không có chứa space ở đầu hoặc cuối, và không có quá 1 space ở giữa các từ.
+				}
+				return false;
+			}
+		</script>
+	</head>
+
+	<body>
+		<form name="frm" onsubmit="return fCheck();">
+			<label>Input data: </label><input type="text" name="data"><br>
+			<label>Password1: </label><input type="password" name="pass1"><br>
+			<label>Password2: </label><input type="password" name="pass2"><br>
+			<input type="submit" value="checkData">
+		</form>
+	</body>
+
+</html>

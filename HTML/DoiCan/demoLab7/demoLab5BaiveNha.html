@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+	function XemPhim(diachi) {
+		document.getElementById("audioPlayer").pause();
+		document.getElementById("audioPlayer").style.display = "none";
+		document.getElementById("videoPlayer").style.display = "block";
+		document.getElementById("videoPlayer").src = diachi;
+		document.getElementById("videoPlayer").play();
+		return false;
+		}
+	function NgheNhac(diachi) {
+		document.getElementById("videoPlayer").pause();
+		document.getElementById("videoPlayer").style.display = "none";
+		document.getElementById("audioPlayer").style.display = "block";
+		document.getElementById("audioPlayer").src = diachi;
+		document.getElementById("audioPlayer").play();
+		return false;
+		}
+</script>
+</head>
+
+<body>
+<table border="1" width="100%" style="position:absolute; height:100%; width:100%;">
+	<tr>
+    	<td colspan="2">
+        	<video width="100%" src="../Downloads/Dap Mo Cuoc Tinh - Dan Nguyen_ Quang Le_.mp4" controls="controls" autoplay="autoplay" id="videoPlayer" />
+            <audio width="100%" id="audioPlayer" controls="controls" autoplay="autoplay"  />
+        </td>
+    </tr>
+    <tr>
+    	<td>
+        	<h2>Audio</h2>
+            <ul>
+            	<li><a href="../Downloads/Cho Hai Dua Minh Gan Nhau - 2Shy.mp3" onclick="return NgheNhac(this.href);">File 1</a></li>
+                <li><a href="../Downloads/file_example_MP3_700KB.mp3" onclick="return NgheNhac(this.href);">File 2</a></li>
+            	<li><a href="../Downloads/Em Khong Sai Chung Ta Sai - ERIK.m4a" onclick="return NgheNhac(this.href);">File 3</a></li>
+                <li><a href="../Downloads/Dung Yeu Nua_ Em Met Roi - Min.mp3" onclick="return NgheNhac(this.href);">File 4</a></li>
+            </ul>
+        </td>
+        <td>
+        	<h2>Video</h2>
+            <ul>
+            	<li><a href="../Downloads/SampleVideo_1280x720_1mb.mp4" onclick="return XemPhim(this.href);">File 1</a></li>
+                <li><a href="../Downloads/Dap Mo Cuoc Tinh - Dan Nguyen_ Quang Le_.mp4" onclick="return XemPhim(this.href);">File 2</a></li>
+                <li><a href="../Downloads/O Lai Va Ra Di - Ngo Trac Linh.mp4" onclick="return XemPhim(this.href);">File 3</a></li>
+                <li><a href="../Downloads/Vang Em Yeu Anh - Ngo Trac Linh.mp4" onclick="return XemPhim(this.href);">File 4</a></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
