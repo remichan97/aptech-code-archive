@@ -1,0 +1,37 @@
+
+Hoc vien thu 1:
+Ho ten hoc vien: Binh
+
+Gioi tinh hoc vien: Nam
+
+Diem C: 9
+
+Diem Python: 8.5
+
+Diem TB: 8.83
+
+**************************
+Hoc vien thu 2:
+Ho ten hoc vien: Thao
+
+Gioi tinh hoc vien: Nu
+
+Diem C: 9
+
+Diem Python: 7.5
+
+Diem TB: 8.50
+
+**************************
+Hoc vien thu 3:
+Ho ten hoc vien: An
+
+Gioi tinh hoc vien: Nam
+
+Diem C: 7.5
+
+Diem Python: 8
+
+Diem TB: 7.67
+
+**************************

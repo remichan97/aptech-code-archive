@@ -1,0 +1,71 @@
+
+Buc tranh thu 1
+
+Ten tac pham: a
+
+Ten tac gia: a
+
+The loai tac pham: a
+
+Chieu dai (cm): 1
+
+Chieu rong (cm): 1
+
+Gia ban ($): 1
+**********************
+Buc tranh thu 2
+
+Ten tac pham: b
+
+Ten tac gia: b
+
+The loai tac pham: b
+
+Chieu dai (cm): 2
+
+Chieu rong (cm): 2
+
+Gia ban ($): 2
+**********************
+Buc tranh thu 3
+
+Ten tac pham: c
+
+Ten tac gia: c
+
+The loai tac pham: c
+
+Chieu dai (cm): 3
+
+Chieu rong (cm): 3
+
+Gia ban ($): 3
+**********************
+Buc tranh thu 4
+
+Ten tac pham: d
+
+Ten tac gia: d
+
+The loai tac pham: d
+
+Chieu dai (cm): 4
+
+Chieu rong (cm): 4
+
+Gia ban ($): 4
+**********************
+Buc tranh thu 5
+
+Ten tac pham: e
+
+Ten tac gia: e
+
+The loai tac pham: e
+
+Chieu dai (cm): 5
+
+Chieu rong (cm): 5
+
+Gia ban ($): 5
+**********************

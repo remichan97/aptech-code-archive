@@ -1,0 +1,30 @@
+
+Thong tin cac buc tranh:
+
+Buc tranh thu 1:
+
+Ten tranh: a
+
+Tac gia: a
+
+The loai: a
+
+Dai: 1
+
+Rong: 1
+
+Gia ban: 1
+
+Buc tranh thu 2:
+
+Ten tranh: b
+
+Tac gia: b
+
+The loai: b
+
+Dai: 2
+
+Rong: 2
+
+Gia ban: 2
