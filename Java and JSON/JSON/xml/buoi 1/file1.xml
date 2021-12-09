@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="demo.xsl" type="text/xsl"?>
+<product>
+	<productDetail>
+		<id>1</id>
+		<name>Samsung A70</name>
+		<price>5000000</price>
+	</productDetail>
+	<productDetail>
+		<id>2</id>
+		<name>Nokia 1200</name>
+		<price>500000</price>
+	</productDetail>
+	
+</product>
