@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<script src="./jquery-3.5.1.js"></script>
+		<script>
+			$(function () {
+				$(".hide").click(function () {
+					$(".dev1").hide(2000);
+				});
+				$("#show").click(function () {
+					$(".dev1").show(2000);
+				})
+				$(".tog").click(function () {
+					$(".dev1").toggle(500);
+				})
+				$(".fadeIn").click(function () {
+					$(".dev1").fadeIn(1000);
+				});
+				$(".fadeOut").click(function () {
+					$(".dev1").fadeOut(1000);
+				});
+				$(".fadeToggle").click(function () {
+					$(".dev1").fadeToggle(1000);
+				});
+				$(".slideUp").click(function () {
+					$(".dev1").slideUp(1000);
+				})
+				$(".slideDown").click(function () {
+					$(".dev1").slideDown(1000);
+				})
+				$(".slideToggle").click(function () {
+					$(".dev1").slideToggle(500);
+				})
+				$(".animate").click(function () {
+					$(".dev1").animate({ left: '250px' }, 500);
+				})
+				$(".return").click(function () {
+					$(".dev1").animate({ left: '0' }, 500);
+				})
+				$(".modify").click(function () {
+					$(".dev1").animate({ left: '+=10px', width: '-=2%' }, 500);
+				})
+				$(".draw").click(function () {
+					$(".dev1").animate({ left: '50%' }, 500).animate({ top: '250px' }, 500).animate({ left: '0' }, 500).animate({ top: '0' }, 500);
+				})
+				$(".dwColour").click(function () {
+					$(".dev1").animate({ left: '50%' }, 500, function () { $(this).css('background', 'red') }).animate({ top: '250px' }, 500, function () { $(this).css('background', 'yellow') }).animate({ left: '0' }, 500, function () { $(this).css('background', 'orange') }).animate({ top: '0' }, 500, function () { $(this).css('background', 'green') });
+				})
+				
+			});
+		</script>
+		<style>
+			.dev1 {
+				background: green;
+				width: 40%;
+				height: 300px;
+				box-shadow: 0 0 10px green;
+				position: relative;
+				font-size: 50px;
+				color: whitesmoke;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section>
+			<input type="button" value="Hide" class="hide"> | <input type="button" value="Show" id="show"> |
+			<input type="button" value="Toggle" class="tog"> | <input type="button" value="Fade In" class="fadeIn"> |
+			<input type="button" value="Fade Out" class="fadeOut"> |
+			<input type="button" value="Toggle Fading" class="fadeToggle"> |
+			<input type="button" value="Slide Up" class="slideUp"> |
+			<input type="button" value="Slide Down" class="slideDown"> |
+			<input type="button" value="Toggle Sliding" class="slideToggle"> |
+			<input type="button" value="Animate!" class="animate"> |
+			<input type="button" value="Return!" class="return"> |
+			<input type="button" value="Modify Animation" class="modify"> |
+			<input type="button" value="Draw a box!" class="draw"> | 
+			<input type="button" value="Draw a Box with Colour Changing" class="dwColour">
+			<hr>
+			<section class="dev1">Developer</section>
+		</section>
+	</body>
+
+</html>

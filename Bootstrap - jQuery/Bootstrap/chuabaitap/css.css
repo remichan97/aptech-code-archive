@@ -1,0 +1,19 @@
+header,aside,article,footer{border: green thin solid}
+header,footer{height: 100px}
+header>section{height: inherit;border: green thin solid;text-align: center;line-height: 100px;color:green;font-weight: bold;}
+nav{height: 30px}
+nav>a{text-align: center;line-height: inherit;border: green thin solid;color: green;font-weight: bold;background: #cff}
+nav>a:hover{text-decoration: none;color: blue}
+aside,article{min-height: 500px;border-top: none;font-weight: bold}
+aside{line-height: 500px;;text-align: center;color: green}
+section.row>.col-md-3{max-width: 20%}
+section.row>.col-md-6{max-width: 60%;flex: 0 0 60%}
+header.row>.col-md-3{max-width: 30%;flex: 0 0 30%}
+header.row>.col-md-9{max-width: 70%;flex: 0 0 70%}
+footer{text-align: center;line-height: 100px;font-weight: bold;color: green}
+.container{padding-left: 0;padding-right: 0}
+.row{margin-left: unset;margin-right: unset;}
+h1{text-align: center;font-size: 31px;font-family: auto;font-weight: bold;margin: 15px auto;}
+label{text-align: right;}
+form>.row{margin-bottom: 7px}
+input:focus,textarea:focus{background: #ff9}

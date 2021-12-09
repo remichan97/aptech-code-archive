@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>Title</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="./baitap.css">
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-4 top">Logo</div>
+				<div class="col-8 top">Banner</div>
+			</div>
+			<nav class="row m">
+				<div class="col-2 menu">Home</div>
+				<div class="col-2 menu">News</div>
+				<div class="col-2 menu">Feedback</div>
+				<div class="col-2 menu">Cart</div>
+				<div class="col-2 menu">Sign-in</div>
+				<div class="col-2 menu">Register</div>
+			</nav>
+			<div class="row bdy">
+				<div class="col-3">Aside</div>
+				<div class="col-6">
+					<h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+					<form name="frm" onsubmit="alert('Cảm ơn bạn đã đăng ký thành viên trên website!'); return false" oninput="rpwd.setCustomValidity(pwd.value != rpwd.value ? 'Password do not match.' : '')">
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label">Tên đăng nhập:</label>
+							<div class="col-sm-9"><input type="text" name="" id="" class="form-control" required pattern="[a-z]+" placeholder="Chỉ chứa các ký tự trong bảng chữ cái"></div>
+						</div>
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label">Mật khẩu:</label>
+							<div class="col-sm-9"><input type="password" name="pwd" id="" class="form-control" required minlength="6" maxlength="20" placeholder="Từ 6 đến 20 ký tự"></div>
+						</div>
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label">Xác nhận mật khẩu:</label>
+							<div class="col-sm-9"><input type="password" name="rpwd" id="" class="form-control" required minlength="6" maxlength="20" placeholder="Điền lại mật khẩu"></div>
+						</div>
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label">Họ và tên:</label>
+							<div class="col-sm-9"><input type="text" name="" id="" class="form-control" required pattern="[A-Za-z\s]+" placeholder="Họ và tên thành viên"></div>
+						</div>
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label">Ngày sinh:</label>
+							<div class="col-sm-9">
+								<input type="date" name="" id="" class="form-control" required>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label">Địa chỉ:</label>
+							<div class="col-sm-9"><textarea class="form-control" rows="2" required placeholder="Địa chỉ nhận hàng của bạn"></textarea></div>
+						</div>
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label">Điện thoại</label>
+							<div class="col-sm-9">
+								<input type="number" name="" id="" class="form-control" required placeholder="0..." pattern="(0)[1-9]+">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label">Email:</label>
+							<div class="col-sm-9">
+								<input type="email" name="" id="" class="form-control" required placeholder="Ví dụ: abc@gmail.com">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label">Facebook:</label>
+							<div class="col-sm-9">
+								<input type="url" name="" id="" class="form-control" required placeholder="https://www.facebook.com/..." pattern="https\:\/\/[www.]+facebook\.com(\/[id\/A-Za-z0-9+]+[profile\.php\?id\=0-9]+)">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="" class="col-sm-3 col-form-label pt-0">Giới tính:</label>
+							<div class="col-sm-9 row">
+								<div class="form-check">
+									<input type="radio" name="gender" id="grd" class="" checked>
+									<label for="" class="form-check-label">Nam</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" name="gender" id="grd" class="">
+									<label for="" class="form-check-label">Nữ</label>
+								</div>
+							</div>
+						</div>
+							<button type="submit" class="btn btn-primary">Đăng ký</button>
+							<button type="reset" class="btn btn-primary">Làm lại</button>
+					</form>
+				</div>
+				<div class="col-3">Aside</div>
+			</div>
+			<div class="row ftr">
+				<div class="col-12">Footer</div>
+			</div>
+		</div>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+	</body>
+
+</html>

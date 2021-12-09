@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<script src="./jquery-3.5.1.js"></script>
+		<script>
+			$(function () {
+				$(".button").click(function () {
+					$(".menu").slideToggle(700);
+				});
+				$(".button").blur(function () {
+					$(".menu").slideUp(700);
+				});
+			})
+		</script>
+		<style>
+			span {
+				font-size: 26px;
+			}
+
+			input[type=image] {
+				float: right;
+			}
+
+			.menu {
+				display: none;
+				position: relative;
+				float: right;
+				box-shadow: 0 0 10px gray;
+				width: 25%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="navibar">
+			<span>Company Logo here</span>
+			<input type="image" src="https://img.icons8.com/metro/26/000000/menu.png" class="button">
+		</nav>
+		<hr>
+		<section class="menu">
+			<a href="#"><p>Item 1</p></a>
+			<a href="#"><p>Item 2</p></a>
+			<a href="#"><p>Item 3</p></a>
+			<a href="#"><p>Item 4</p></a>
+			<a href="#"><p>Item 5</p></a>
+		</section>
+		<section class="para">
+			<p>This is a demo paragraph, when clicking on the menu, the paragraph should automatically indent:</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus ultrices libero. Nulla mattis
+				semper orci et aliquam. Quisque lacinia lacus ac libero euismod consequat. Vivamus varius dapibus sem ac
+				sagittis. Sed viverra, sem in posuere egestas, dolor enim fringilla magna, a iaculis turpis lorem in
+				lorem. Morbi porttitor tortor vitae ante venenatis, quis congue lectus bibendum. Nullam vitae pulvinar
+				mi. Vestibulum efficitur vehicula urna, sed feugiat urna interdum ut. Pellentesque vehicula erat diam,
+				ut placerat odio ornare et. Donec maximus lorem et enim tincidunt, ac elementum justo pharetra.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent et
+				eros at sapien efficitur condimentum. Nunc malesuada leo eget odio accumsan, a venenatis nisi imperdiet.
+				Maecenas nec sagittis nunc, non condimentum libero. Fusce eget est non ante mattis malesuada. Nunc
+		</section>
+	</body>
+
+</html>

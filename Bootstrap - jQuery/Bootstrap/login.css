@@ -1,0 +1,13 @@
+.title {
+	text-align: center;
+}
+
+.login {
+	width: 30%;
+	margin: 0 auto;
+	background-color: white;
+}
+
+body {
+	background-color: blue;
+}
